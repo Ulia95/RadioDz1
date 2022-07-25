@@ -100,8 +100,18 @@ public class RadioTest {
         @Test
     public void currentVolumeMoreMax(){
         Radio radio = new Radio();
-        radio.setCurrentVolume(11);
+        radio.setCurrentVolume(111);
             int expected = 0;
+            int actual = radio.getCurrentStation();
+            Assertions.assertEquals(expected, actual);
+
+        }
+
+        @Test
+    public void stationCount(){
+        Radio radio = new Radio(10);
+        radio.setCurrentStation(5);
+            int expected = 5;
             int actual = radio.getCurrentStation();
             Assertions.assertEquals(expected, actual);
 
