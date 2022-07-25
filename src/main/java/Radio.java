@@ -55,8 +55,6 @@ public class Radio {
     public void reduseVolume() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
-        } else {
-            return;
         }
     }
 }
